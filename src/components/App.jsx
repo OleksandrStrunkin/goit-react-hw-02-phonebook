@@ -26,8 +26,9 @@ class App extends Component {
       number,
     }
 
-    let names = this.state.contacts.map(cont => cont.name)
-    if (names.includes(name)) {
+    let names = this.state.contacts.map(cont => cont.name.toLocaleLowerCase())
+    console.log(names)
+    if (names.includes(name.toLocaleLowerCase())) {
       alert(`Список вже має ім'я ${name}`)
       return
     }
