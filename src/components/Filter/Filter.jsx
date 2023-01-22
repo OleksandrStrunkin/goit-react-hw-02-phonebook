@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import './Filter.css'
+import styled from './Filter.module.css'
 const Filter = ({ value, onChange }) => {
      return (
-         <label className='filter'>
+         <label className={styled.filter}>
             Пошук
             <input type="text" value={value} onChange={onChange} />
           </label>
